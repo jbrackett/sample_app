@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -8,6 +9,9 @@ gem 'rails', '3.2.8'
 group :development, :test do
 	gem 'sqlite3'
 	gem 'rspec-rails'
+	gem 'guard-rspec'
+	gem 'guard-spork'
+	gem 'spork'
 end
 
 
@@ -27,14 +31,13 @@ gem 'jquery-rails'
 
 group :test do
 	gem 'capybara', '1.1.2'
+	gem 'rb-fsevent', '0.9.1', :require => false
+	gem 'growl', '1.0.3'
 end
 
 group :production do
 	gem 'pg', '0.12.2'
 end
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
